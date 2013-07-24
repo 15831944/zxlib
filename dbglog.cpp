@@ -9,13 +9,13 @@
 
 
 #ifdef _WIN32
-#	include "stdafx.h"
+//#	include "stdafx.h"
 #	pragma warning(disable:4996)
 #	include <windows.h>  //OutputDebugStringA()
 #	include <windowsx.h>
 #endif
 
-#include "funclog.h"
+#include "zlog.h"
 
 //////////////////////////////////////////////////////////////////////////////
 void DBGLOG_ARGLIST( const char * fmt, ... )

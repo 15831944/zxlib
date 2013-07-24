@@ -15,7 +15,6 @@
 #	include <windowsx.h>
 #endif
 
-#include "funclog.h"
 
 //////////////////////////////////////////////////////////////////////////////
 void DBGLOG_ARGLIST( const char * fmt, ... );
