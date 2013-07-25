@@ -15,7 +15,7 @@
 #	include <windowsx.h>
 #endif
 
-#include "zlog.h"
+#include "zxlog.h"
 
 //////////////////////////////////////////////////////////////////////////////
 void DBGLOG_ARGLIST( const char * fmt, ... )
