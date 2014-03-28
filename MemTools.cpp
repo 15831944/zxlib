@@ -322,8 +322,24 @@ namespace MemTools{
 	{ 
 		free(ptr);
 	}
-
+    
 	//////////////////////////////////////////////////////////////////////////
+
+    void flipBuffer(uchar *pBuf, ulong ulLen)
+    {
+        if (0 == ulLen)
+            return;
+
+        unsigned char ucTemp;
+        for (unsigned long i = 0; i < ulLen >> 1; ++i)
+        {
+            ucTemp = pBuf[i];
+            pBuf[i] = pBuf[ulLen - i - 1];
+            pBuf[ulLen - i - 1] = ucTemp;
+        }
+    }
+
+
 
 } //namespace Memtools
 //////////////////////////////////////////////////////////////////////////

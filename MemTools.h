@@ -12,9 +12,10 @@
 //#include "stdafx.h"
 #include <vector>
 #include <string>
+#include <sstream>
 #include <tchar.h>
 #include <windows.h>
-#include <WinCrypt.h>
+
 
 
 
@@ -33,10 +34,6 @@
 #   else
 #       define tstrstream std::stringstream
 #   endif
-#endif
-
-#if !defined(XENCODETYPE)
-#   define XENCODETYPE			X509_ASN_ENCODING | PKCS_7_ASN_ENCODING
 #endif
 
 typedef unsigned char uchar;
@@ -135,7 +132,7 @@ namespace MemTools
 		~CT2UTF8CharBuf();
 	};
 	//////////////////////////////////////////////////////////////////////////
-
+    void flipBuffer(uchar *pBuf, ulong ulLen);
 }
 
 
