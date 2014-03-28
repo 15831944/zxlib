@@ -325,23 +325,6 @@ namespace MemTools{
 
 	//////////////////////////////////////////////////////////////////////////
 
-
-	tstring __cdecl st2Tstring(std::string str)
-	{
-		CA2TCharBuf a2tbuf(str.c_str());
-
-		tstring ret = a2tbuf.ptr;
-		return ret;
-	}
-
-
-	std::string  __cdecl ts2String(tstring tstr)
-	{
-		CT2ACharBuf t2abuf(tstr.c_str());
-		std::string ret = t2abuf.ptr;
-
-		return ret;
-	}
 } //namespace Memtools
 //////////////////////////////////////////////////////////////////////////
 

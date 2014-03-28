@@ -29,9 +29,9 @@
 
 #if !defined(tstrstream)
 #   if defined(UNICODE) || defined(_UNICODE)
-#       define tstrstream std::stringstream
-#   else
 #       define tstrstream std::wstringstream
+#   else
+#       define tstrstream std::stringstream
 #   endif
 #endif
 
@@ -135,9 +135,6 @@ namespace MemTools
 		~CT2UTF8CharBuf();
 	};
 	//////////////////////////////////////////////////////////////////////////
-
-	tstring __cdecl st2Tstring(std::string str);
-	std::string __cdecl ts2String(tstring tstr);
 
 }
 
