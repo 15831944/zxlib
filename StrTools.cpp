@@ -33,8 +33,8 @@ namespace StrTools
     tstring errString(int errCode)
     {
         tstrstream ss;
-        ss.flags(std::ios::internal | std::ios::hex | std::ios::showbase);
-        ss.width(8);
+        ss.flags(std::ios::internal | std::ios::hex | std::ios::showbase | std::ios::uppercase);
+        ss.width(10);
         ss.fill('0');
         ss << errCode;
 
