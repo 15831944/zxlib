@@ -13,7 +13,7 @@
 
 //#define _CRT_SECURE_NO_WARNINGS
 //////////////////////////////////////////////////////////////////////
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "MemTools.h"
 #include <assert.h>
 #include <comutil.h>

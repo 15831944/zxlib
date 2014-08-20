@@ -1,5 +1,5 @@
 //#define _CRT_SECURE_NO_WARNINGS
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "AppFileSys.h"
 #include "StrTools.h"
 

@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="zxlib">
-      <UniqueIdentifier>{24bab195-3edf-4a2e-b8f8-95d9705178f5}</UniqueIdentifier>
+    <Filter Include="utils">
+      <UniqueIdentifier>{a2274d09-d894-45cf-97e6-d3c41ca8224f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,20 +27,23 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dbglog.h">
-      <Filter>zxlib</Filter>
+    <ClInclude Include="utils\AppFileSys.h">
+      <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="funclog.h">
-      <Filter>zxlib</Filter>
+    <ClInclude Include="utils\dbglog.h">
+      <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="MemTools.h">
-      <Filter>zxlib</Filter>
+    <ClInclude Include="utils\funclog.h">
+      <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="StrTools.h">
-      <Filter>zxlib</Filter>
+    <ClInclude Include="utils\MemTools.h">
+      <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="zxlog.h">
-      <Filter>zxlib</Filter>
+    <ClInclude Include="utils\StrTools.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\zxlog.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,22 +53,20 @@
     <ClCompile Include="zxlib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dbglog.cpp">
-      <Filter>zxlib</Filter>
+    <ClCompile Include="utils\AppFileSys.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="funclog.cpp">
-      <Filter>zxlib</Filter>
+    <ClCompile Include="utils\dbglog.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="MemTools.cpp">
-      <Filter>zxlib</Filter>
+    <ClCompile Include="utils\funclog.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="StrTools.cpp">
-      <Filter>zxlib</Filter>
+    <ClCompile Include="utils\MemTools.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README">
-      <Filter>zxlib</Filter>
-    </None>
+    <ClCompile Include="utils\StrTools.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
