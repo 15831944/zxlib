@@ -1,11 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-
-#if defined(WIN32) || defined(_WINDOWS)
-//#	include "StdAfx.h"
-#	pragma warning(disable:4996)
-#	include <Windows.h>
-#endif
+//#define _CRT_SECURE_NO_WARNINGS
+//#if defined(WIN32) || defined(_WINDOWS)
+#include "StdAfx.h"
+#pragma warning(disable:4996)
+#include <Windows.h>
+//#endif
 
 
 #include <string.h>
@@ -20,9 +20,16 @@ map<DWORD,UINT> FucLog::gsm_layer = map<DWORD,UINT>();
 
 FucLog::FucLog(char* szFuncName)
 {
-	DWORD tid = GetCurrentThreadId();
-	char szTid[20] = {0};
-	sprintf(szTid, "[%d]", tid);
+    DWORD pid = GetCurrentProcessId();
+    DWORD tid = GetCurrentThreadId();
+
+    char szTid[20] = { 0 };
+    sprintf(szTid, "[%d]", tid);
+
+    char szPidTid[40] = { 0 };
+    sprintf(szPidTid, "[%d:%d]", pid, tid);
+
+ 
 
 	if (gsm_layer.empty()){
 		gsm_layer[tid]=0;
@@ -55,7 +62,7 @@ FucLog::FucLog(char* szFuncName)
     strcpy(szAllLog, szIndentLog);
     strcat(szAllLog, "->");
     strcat(szAllLog, m_szFuncname);
-	strcat(szAllLog, szTid);
+    strcat(szAllLog, szPidTid);
 
 
 #if defined(_WIN32) || defined(_WINDOWS)
@@ -69,9 +76,14 @@ FucLog::FucLog(char* szFuncName)
 
 FucLog::~FucLog(void)
 {
-	DWORD tid = GetCurrentThreadId();
-	char szTid[20] = {0};
-	sprintf(szTid, "[%d]", tid);
+    DWORD pid = GetCurrentProcessId();
+    DWORD tid = GetCurrentThreadId();
+
+    char szTid[20] = { 0 };
+    sprintf(szTid, "[%d]", tid);
+
+    char szPidTid[40] = { 0 };
+    sprintf(szPidTid, "[%d:%d]", pid, tid);
 
     char szAllLog[MAX_LOG_LEN] = {0};
     char szIndentLog[LOGINDENT_LEN] = {0};
@@ -84,7 +96,7 @@ FucLog::~FucLog(void)
     strcpy(szAllLog, szIndentLog);
     strcat(szAllLog, "<-");
     strcat(szAllLog, m_szFuncname);
-	strcat(szAllLog, szTid);
+    strcat(szAllLog, szPidTid);
 
 	gsm_layer[tid]--;
 
