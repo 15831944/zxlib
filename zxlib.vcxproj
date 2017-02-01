@@ -79,24 +79,20 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dbglog.h" />
-    <ClInclude Include="funclog.h" />
-    <ClInclude Include="MemTools.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="StrTools.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="zxlog.h" />
+    <ClInclude Include="zxlib\file_tools.h" />
+    <ClInclude Include="zxlib\log_func.h" />
+    <ClInclude Include="zxlib\log_log.h" />
+    <ClInclude Include="zxlib\mem_tools.h" />
+    <ClInclude Include="zxlib\str_inc.h" />
+    <ClInclude Include="zxlib\str_tools.h" />
+    <ClInclude Include="zxlib\td_tools.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dbglog.cpp" />
-    <ClCompile Include="funclog.cpp" />
-    <ClCompile Include="MemTools.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="StrTools.cpp" />
     <ClCompile Include="zxlib.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README" />
+    <ClCompile Include="zxlib\str_tools.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
