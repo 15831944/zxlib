@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 //#define _CRT_SECURE_NO_WARNINGS
 //#if defined(WIN32) || defined(_WINDOWS)
-#include "StdAfx.h"
+#include "../stdafx.h"
 #pragma warning(disable:4996)
 #include <Windows.h>
 //#endif

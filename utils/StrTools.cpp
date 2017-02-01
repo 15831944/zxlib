@@ -1,7 +1,7 @@
 
 //////////////////////////////////////////////////////////////////////
 //#define _CRT_SECURE_NO_WARNINGS
-#include "stdafx.h"
+#include "../stdafx.h"
 #include <assert.h>
 #include "StrTools.h"
 #include "MemTools.h"
